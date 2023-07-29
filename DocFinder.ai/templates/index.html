@@ -1,0 +1,192 @@
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        input[type="text"] {
+            width: 300px; 
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px; 
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #007bff; 
+        }
+
+        .header {
+            background-color: rgb(119, 72, 151);
+            color: #fff;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+
+        h1 {
+            color: #000000;
+        }
+
+        .docfinder-text {
+            font-size: 60px;
+            font-family: "Arial", sans-serif;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .search-container {
+            background-color: rgb(117, 164, 185);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 30px; 
+            border-radius: 10px; 
+        }
+
+        
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: text; 
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #007bff; 
+        }
+
+        input[type="submit"] {
+            width: 120px; 
+            padding: 10px;
+            border: none;
+            border-radius: 10px; 
+            font-size: 16px;
+            background-color: #007bff; 
+            color: #fff; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease; 
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; 
+        }
+
+
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .search-container {
+            background-color: rgb(117, 164, 185);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .submission {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            color: #000000;
+            margin-top: 30px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ccc;
+        }
+
+        .no-results {
+            color: #f00;
+            font-style: italic;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="header"> -->
+        <!-- <img class="logo-img" src="../images/hello.jpg" alt="Image" width="215" height="234"> -->
+    <!-- </div> -->
+
+    <div class="search-container">
+        <h1 class="docfinder-text">DocFinder</h1>
+        <form method="post">
+            <input type="text" name="search_query" placeholder="Enter your keyword for Document search" />
+            <input type="submit" value="Search" />
+        </form>
+
+        {% if results %}
+        <h2>Matched Results:</h2>
+        {% for result in results %}
+            <div class="submission">
+                <p><strong>Submission Number:</strong> {{ result.submission_number }}</p>
+                <p><strong>Date Obtained:</strong> {{ result.date_obtained }}</p>
+                <p><strong>Page Number:</strong> {{ result.page_number }}</p>
+                <p><strong>Text Embedded:</strong></p>
+                <p>{{ result.text_embedded | case_insensitive_replace(search_query) | safe }}</p>
+              
+               
+                <p><strong>Text OCR:</strong></p>
+                <p>{{ result.text_ocr | case_insensitive_replace(search_query) | safe }}</p>
+                
+                <hr>
+            </div>
+        {% endfor %}
+        {% else %}
+        <script>
+            window.onload = function() {
+                alert("No exact match found!");
+            };
+        </script>
+        {% endif %}
+    </div>
+</body>
+</html>
+
