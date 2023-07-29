@@ -1,6 +1,6 @@
 # Text Processing and MySQL Data Visualization
 
-This project is about creating a document search from a database, which involves processing a dataset, storing it in a MySQL database, and searching the document from the database using a web application. Follow the steps below to set up and run the project.
+This project is about creating a document search using keywords from a database, which involves processing a dataset, populating it in a MySQL database, and searching the document from the database using a web application. Follow the steps below to set up and run the project.
 
 ## Step 1: Extracting and Preparing the Dataset
 
@@ -16,12 +16,12 @@ This project is about creating a document search from a database, which involves
 ## Step 3: Setting up the MySQL Database
 
 1. Connect to your MySQL server.
-2. Create a new database using the schema given in `tables.sql`. You can execute the SQL commands in a MySQL client or interface.
+2. Create a new database using the schema given in `tables.sql`. You can execute the SQL commands through a MySQL client or interface.
 
 ## Step 4: Populating the MySQL Database
 
 1. Use the Python script `insert_summary_data.py` to populate the MySQL database with the CSV dataset.
-2. Before running the script, make sure to update the SQL parameters such as database name, host IP, password, and user.
+2. Before running the script, make sure to update the SQL parameters such as database name, host IP, password, and user. Your parameters are different than mine ;)
 
 ## Step 5: HTML Templates
 
