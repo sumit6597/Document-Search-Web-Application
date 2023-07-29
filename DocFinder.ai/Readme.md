@@ -1,6 +1,6 @@
 # DocFinder
 
-This project is about creating a document search using keywords from a database, which involves processing a dataset, populating it in a MySQL database, and searching the document from the database using a web application. Based on the keyword search, the webpage will return the submission_number, page_number, embedded_text, and OCR_text. Follow the steps below to set up and run the project.
+This project is about creating a document search using keywords from a database, which involves processing a dataset [Download the data](https://www.boleary.com/blog/posts/202307-pmn/#download-the-data), populating it in a MySQL database, and searching the document from the database using a web application. Based on the keyword search, the webpage will return the submission_number, page_number, embedded_text, and OCR_text. Follow the steps below to set up and run the project.
 
 ## Step 1: Extracting and Preparing the Dataset
 
