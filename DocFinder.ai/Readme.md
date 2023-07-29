@@ -1,10 +1,10 @@
 # Text Processing and MySQL Data Visualization
 
-This project involves processing a dataset, storing it in a MySQL database, and searching the documnet from the database using a web application. Follow the steps below to set up and run the project.
+This project is about creating a document search from a database, which involves processing a dataset, storing it in a MySQL database, and searching the document from the database using a web application. Follow the steps below to set up and run the project.
 
 ## Step 1: Extracting and Preparing the Dataset
 
-1. Clone this repository to your local machine.
+1. Clone this repository on your local machine.
 2. Open a terminal and navigate to the project directory.
 3. Execute the Python script `TextProcessing.py` to extract and convert the dataset into the proper format.
 
@@ -25,7 +25,7 @@ This project involves processing a dataset, storing it in a MySQL database, and 
 
 ## Step 5: HTML Templates
 
-1. The `templates` directory contains the HTML files required for given task.
+1. The `templates` directory contains the HTML files required for a given task.
 
 ## Step 6: Running the Web Application
 
