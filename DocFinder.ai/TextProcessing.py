@@ -44,7 +44,7 @@ type(pmn_summaries)
 
 df = pd.DataFrame(pmn_summaries)
 
-df
+# df
 
 # dfTest=df[:1000]
 
@@ -69,7 +69,7 @@ def convert_date_format():
 if __name__ == "__main__":
     convert_date_format()
 
-df
+# df
 
 df.to_csv('Gesund_Full.csv')
 
