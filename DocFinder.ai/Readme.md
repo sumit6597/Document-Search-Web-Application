@@ -41,6 +41,6 @@ For any queries or assistance, feel free to reach out to sumit.atlancey@gmail.co
 
 ## Demo Video
 
-[Demo Video](https://drive.google.com/file/d/1hyK2T9jdMKBjNfWTMNkhUddMUbd1ipf4/view?usp=sharing)https://drive.google.com/file/d/1hyK2T9jdMKBjNfWTMNkhUddMUbd1ipf4/view?usp=sharing)
+[Demo Video]: (https://drive.google.com/file/d/1hyK2T9jdMKBjNfWTMNkhUddMUbd1ipf4/view?usp=sharing)https://drive.google.com/file/d/1hyK2T9jdMKBjNfWTMNkhUddMUbd1ipf4/view?usp=sharing)
 
 
